@@ -1,1 +1,29 @@
-<p>list works!</p>
+<div class="container">
+    <h1>
+        Informacion de {{}}
+    </h1>
+  </div>
+  <div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>APELLIDO</th>
+          <th>RUT</th>
+          <th>TELEFONO</th>
+          <th>DIRECCION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of listaPersonal">
+          <td>{{ p.id }}</td>
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.apellido }}</td>
+          <td>{{ p.rut }}</td>
+          <td>{{ p.telefono }}</td>
+          <td>{{ p.direccion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
