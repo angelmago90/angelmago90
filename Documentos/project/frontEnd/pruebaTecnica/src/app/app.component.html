@@ -1,7 +1,8 @@
 <div class="container">
   <h1>Listado de Personal</h1>
   <div class="form-group">
-    <input type="text" class="forms-control" placeholder="Buscar.." />
+    <input type="text" class="forms-control" placeholder="Buscar.."  [(ngModel)]="filterp"
+    name="filterp" />
   </div>
 </div>
 <div class="container">
@@ -15,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let p of listaPersonal">
+      <tr *ngFor="let p of listaPersonal | filter: filterp">
         <td>{{ p.id }}</td>
         <td>{{ p.nombre }}</td>
         <td>{{ p.rut }}</td>

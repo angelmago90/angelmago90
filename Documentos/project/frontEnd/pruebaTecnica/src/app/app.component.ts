@@ -8,6 +8,7 @@ import { DataService } from './component/list/data.service';
 })
 export class AppComponent implements OnInit {
   title = 'pruebaTecnica';
+  filterp = '';
   public listaPersonal:any = []
 
   constructor(private DataService:DataService){
